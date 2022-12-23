@@ -1,0 +1,107 @@
+@import url('fix.css');
+
+@import url(../vendor/remove-squares.css);
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+}
+
+.page {
+  height: 100%;
+  width: 100%;
+  background: #1F1F1F;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.grid {
+  max-width: 920px;
+  width: 100%;
+  height: 100%;
+  display: grid;
+  background-color: #FFC0CB;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-repeat: no-repeat;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  background-image: url('../images/cat.svg');
+  filter: blur(16px);
+  animation: removeBlur 3s forwards;
+}
+
+.grid__item {
+  -webkit-background-size: cover;
+  background-size: cover;
+  border: 3px solid white;
+  background: #1F1F1F;
+  animation-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  -webkit-animation-name: removeBackground, fadeOutRight;
+  -moz-animation-name: removeBackground, fadeOutRight;
+  -o-animation-name: removeBackground, fadeOutRight;
+  animation-name: removeBackground, fadeOutRight;
+  -webkit-animation-duration: 3s, 2s;
+  -moz-animation-duration: 3s, 2s;
+  -o-animation-duration: 3s, 2s;
+  animation-duration: 3s, 2s;
+  animation-fill-mode: forwards;
+}
+
+.grid__item:nth-child(1) {
+  -webkit-animation-delay: 3s, 5s;
+  -moz-animation-delay: 3s, 5s;
+  -o-animation-delay: 3s, 5s;
+  animation-delay: 3s, 5s;
+}
+
+.grid__item:nth-child(2) {
+  grid-column: 2 / 4;
+  -webkit-animation-delay: 7s, 9s;
+  -moz-animation-delay: 7s, 9s;
+  -o-animation-delay: 7s, 9s;
+  animation-delay: 7s, 9s;
+}
+
+.grid__item:nth-child(3) {
+  -webkit-animation-delay: 4s, 6s;
+  -moz-animation-delay: 4s, 6s;
+  -o-animation-delay: 4s, 6s;
+  animation-delay: 4s, 6s;
+}
+
+.grid__item:nth-child(4) {
+  -webkit-animation-delay: 6s, 8s;
+  -moz-animation-delay: 6s, 8s;
+  -o-animation-delay: 6s, 8s;
+  animation-delay: 6s, 8s;
+  -webkit-animation-name: removeBackground, fadeOutDown;
+  -moz-animation-name: removeBackground, fadeOutDown;
+  -o-animation-name: removeBackground, fadeOutDown;
+  animation-name: removeBackground, fadeOutDown;
+}
+
+.grid__item:nth-child(5) {
+  -webkit-animation-delay: 5s, 7s;
+  -moz-animation-delay: 5s, 7s;
+  -o-animation-delay: 5s, 7s;
+  animation-delay: 5s, 7s;
+}
+
+.grid__item:nth-child(2),
+.grid__item:nth-child(5) {
+  -webkit-animation-name: removeBackground, fadeOutRight;
+  -moz-animation-name: removeBackground, fadeOutRight;
+  -o-animation-name: removeBackground, fadeOutRight;
+  animation-name: removeBackground, fadeOutRight;
+}
+
+.grid__item:nth-child(1),
+.grid__item:nth-child(3) {
+  -webkit-animation-name: removeBackground, fadeOutLeft;
+  -moz-animation-name: removeBackground, fadeOutLeft;
+  -o-animation-name: removeBackground, fadeOutLeft;
+  animation-name: removeBackground, fadeOutLeft;
+}

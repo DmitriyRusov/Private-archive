@@ -1,0 +1,20 @@
+@keyframes removeBlur {
+  0% {
+    filter: blur(16px);
+  }
+  50% {
+    filter: blur(10px);
+  }
+  100% {
+    filter: blur(0px);
+  }
+}
+
+@keyframes removeBackground {
+  0% {
+    background: #1F1F1F;
+  }
+  100% {
+    background: rgba(31, 31, 31, 0.6);
+  }
+}
