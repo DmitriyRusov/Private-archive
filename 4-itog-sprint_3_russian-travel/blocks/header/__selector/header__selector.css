@@ -1,0 +1,11 @@
+.header__selector {
+  margin-right: 18px;
+  display: flex;
+  align-items: center;
+  padding-top: 18px;
+  padding-bottom: 6px;
+}
+
+.header__selector:last-of-type {
+  margin: 0;
+}

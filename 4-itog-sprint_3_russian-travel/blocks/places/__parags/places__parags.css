@@ -1,0 +1,16 @@
+.places__parags {
+  text-align: left;
+}
+
+@media screen and (max-width: 500px) {
+  .places__parags {
+    max-width: 294px;
+    padding-left: 7px;
+  }
+}
+
+@media screen and (max-width: 300px) {
+  .places__parags {
+    max-width: 210px;
+  }
+}
