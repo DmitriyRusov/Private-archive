@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <script src="https://unpkg.com/react@16/umd/react.development.js"></script>
+  <script src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/jsx">
+  // Классовый компонент User
+  class User extends React.Component {
+    constructor(props) {
+      super(props);
+  
+          // Начальные значения внутреннего состояния
+      this.state = {
+        rating: 0,
+      };
+    }
+  
+      /*
+       * Обработчики событий: изменяют внутреннее состояние
+       */
+    handleLike = () => {
+      this.setState({ rating: 1 });
+    };
+  
+    handleDislike = () => {
+      this.setState({ rating: -1 });
+    };
+  
+    // JSX-структура компонента
+    render() {
+      return (
+        <p>
+          <img src={`https://code.s3.yandex.net/web-code/react/${this.props.id}.png`} width="75" />
+          <br /><b>{this.props.name}</b>
+                  <div className="rating">
+    <button onClick={this.handleLike} disabled={this.state.rating > 0}>👍</button>
+    {this.state.rating}
+    <button onClick={this.handleDislike} disabled={this.state.rating < 0}>👎</button>
+</div>
+        </p>
+      );
+    }
+  }
+  
+  // Основной код приложения
+  ReactDOM.render((
+    <>
+      <h2>Мои воображаемые друзья:</h2>
+      <User id="1" name="Gregory" />
+      <User id="2" name="James" />
+      <User id="3" name="Allison" />
+    </>
+  ), document.querySelector('#root'));
+</script>
+</body>
+</html>

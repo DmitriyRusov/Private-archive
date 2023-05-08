@@ -1,0 +1,36 @@
+// Перепишем код с использованием хуков
+function NeonCursor() {
+  const [position, setPosition] = React.useState({ top: 0, left: 0 });
+
+  React.useEffect(() => {
+    function handleMouseMove(event) {
+      setPosition({
+        top: event.pageY,
+        left: event.pageX,
+      });
+    }
+
+        // Список действий внутри одного хука
+    document.addEventListener('mousemove', handleMouseMove);
+    document.body.classList.add('no-cursor');
+
+        // Возвращаем функцию, которая удаляет эффекты
+    return () => {
+      document.body.classList.remove('no-cursor');
+      document.removeEventListener('mousemove', handleMouseMove);
+    };
+  });
+
+  return (
+    <img
+      src="https://code.s3.yandex.net/web-code/react/cursor.svg"
+      width={30}
+      style={{
+        position: 'absolute',
+        top: position.top,
+        left: position.left,
+        pointerEvents: 'none',
+      }}
+    />
+  );
+}

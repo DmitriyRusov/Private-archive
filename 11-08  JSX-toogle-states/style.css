@@ -1,0 +1,50 @@
+body {
+  background: white;
+  font-family: Arial, sans-serif;
+}
+
+.switch {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+}
+
+.switch button {
+  width: 75px;
+  height: 100px;
+  background: url(https://code.s3.yandex.net/web-code/sprite.jpg) no-repeat;
+  border: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+.blue.off button {
+  background-size: 320px 320px;
+  background-position: -242px -215px;
+}
+
+.blue.on button {
+  background-size: 320px 320px;
+  background-position: -162px -215px;
+}
+
+.orange.off button {
+  background-size: 320px 320px;
+  background-position: -82px -215px;
+}
+
+.orange.on button {
+  background-size: 320px 320px;
+  background-position: -2px -215px;
+}
+
+.green.off button {
+  background-size: 160px 160px;
+  background-position: -84px -1px;
+}
+
+.green.on button {
+  background-size: 160px 160px;
+  background-position: -1px -1px;
+}

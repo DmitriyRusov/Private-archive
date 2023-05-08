@@ -1,0 +1,40 @@
+/* В теме про реакт мы умышленно упрощаем стилизацию и семантику, чтобы вы сосредоточились на программировании.
+В реальных проектах используйте всё, чему научились ранее */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html, body, h1, h2, h3, p, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 40px;
+}
+
+h2 {
+  font-size: 40px;
+  font-weight: normal;
+  margin-bottom: 40px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+p::before {
+  content: '';
+  width: 13px;
+  height: 13px;
+  background-color: #1071FF;
+  border-radius: 50%;
+  display: inline-block;
+  margin-right: 10px;
+}
+
