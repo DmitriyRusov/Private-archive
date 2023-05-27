@@ -1,0 +1,41 @@
+h1 {
+  text-align: center;
+}
+.app__text {
+  max-width: 50%;
+  margin: auto;
+}
+.app__message {
+  text-align: center;
+	color: red;
+}
+.input {
+  display: flex;
+  justify-content: center;
+  margin: 16px 0px 16px;
+}
+.input__button {
+	background-color:#d60000;
+	border-radius:2px;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	padding:16px 16px;
+	text-decoration:none;
+  border: none;
+}
+.input__button:hover {
+	color: #f0909d;
+}
+.input__button:active {
+	position:relative;
+	top:1px;
+}
+.input__name {
+  margin-right: 12px;
+}
+
+
+
+
